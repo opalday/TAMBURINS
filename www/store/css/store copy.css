@@ -1,0 +1,330 @@
+@charset "UTF-8";
+
+section {
+    width: 100%;
+    height: 100%;
+
+    /* s-caption의 기준! */
+    position: relative;
+}
+
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+
+    outline: 1px soild red;
+
+
+    /* overflow: hidden; */
+
+    
+    
+}
+
+.container > article {
+    display: none;
+
+    
+}
+.container > article.on {
+    display: block;
+}
+
+ul {
+    /* outline: 1px solid red; */
+}
+
+img {
+    width: 100%;
+}
+
+video {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.s-caption {
+    width: 100%;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.s-inner {
+    width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+    /* .s-add의 기준! */
+}
+
+.s-name {
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 120px;
+}
+
+.s-add-wrap {
+    text-align: right;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    font-size: 1rem;
+
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.s-add-wrap .s-add {
+    margin-bottom: 10px;
+}
+
+.s-add-wrap .s-map {}
+
+.s-add-wrap .s-map a {
+    color: #fff;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 300;
+    display: inline-block;
+    margin-left: 12px;
+
+}
+
+.s-add-wrap .s-map a:hover {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/*************************** store 공통 css */
+article.k-con {}
+
+article.k-con article.sinsa ul.sinsa-s {
+    width: 700%;
+}
+
+article.sinsa .sinsa-s li {
+    width: 14.28%;
+    float: left;
+}
+
+/********* sinsa css  */
+
+article.k-con article.dosan .dosan-s {
+    width: 500%;
+}
+
+article.dosan .dosan-s li {
+    width: 20%;
+    float: left;
+}
+
+/********* dosan css  */
+
+article.k-con article.samchung .samchung-s {
+    width: 400%;
+}
+
+article.samchung .samchung-s li {
+    width: 25%;
+    float: left;
+}
+
+/********** sungsu css  */
+
+article.k-con article.sungsu .sungsu-s {
+    width: 700%;
+}
+
+article.sungsu .sungsu-s li {
+    width: 14.28%;
+    float: left;
+}
+
+/********** sungsu css  */
+
+article.k-con article.hannam .hannam-s {
+    width: 1000%;
+}
+
+article.hannam .hannam-s li {
+    width: 10%;
+    float: left;
+}
+
+/********* hannam css */
+
+
+
+/********* j-store css  */
+
+article.j-con article.aoyama .aoyama-s {
+    width: 700%;
+}
+
+article.aoyama .aoyama-s li {
+    width: 14.28%;
+    float: left;
+}
+
+/********** aoyama css */
+article.j-con article.osaka .osaka-s {
+    width: 200%;
+}
+
+article.osaka .osaka-s li {
+    width: 50%;
+    float: left;
+}
+
+/********* osaka css */
+
+/********* c-store css  */
+article.c-con article.h-shanghai .h-shanghai-s {
+    width: 900%;
+}
+
+article.h-shanghai .h-shanghai-s li {
+    width: 11.11%;
+    float: left;
+}
+
+/******* h-shanghai css  */
+
+article.c-con article.h-sz .h-sz-s {
+    width: 700%;
+}
+
+article.h-sz .h-sz-s li {
+    width: 14.28%;
+    float: left;
+}
+
+/******* h-sz css  */
+
+article.c-con article.shanghai .shanghai-s {
+    width: 1100%;
+}
+
+article.shanghai .shanghai-s li {
+    width: 9.09%;
+    float: left;
+}
+
+/********offline css  */
+.inner {
+    /* outline: 1px solid red; */
+}
+
+article.off-con .off-box {
+    width: 100%;
+    height: 100%;
+
+    padding: 50px 0 80px;
+    box-sizing: border-box;
+}
+
+.off-box .off-type {
+    font-size: 22px;
+    font-size: 1.375rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 50px 0;
+
+    position: relative;
+}
+
+.off-box .off-type::after {
+    content: "";
+    display: block;
+    width: 1280px;
+    height: 1px;
+    background-color: #111;
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.off-box .off-list {
+    width: 100%;
+}
+
+.off-box ul li {
+    width: 23.5%;
+    height: 300px;
+    border: 1px solid #111;
+    padding: 80px 0;
+    box-sizing: border-box;
+    text-align: center;
+    margin-right: 2%;
+
+    float: left;
+}
+
+.off-box ul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.off-box .off-dep li {
+    width: 15%;
+}
+
+.off-box .off-dep li:nth-child(4) {
+    margin-right: 2%;
+}
+
+.off-box .off-dep li:last-child {
+    margin-right: 0;
+}
+
+.off-box ul li .off-name {
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 20px;
+
+    position: relative;
+}
+
+.off-box ul li .off-name::after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 2px;
+    background-color: #111;
+
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.off-box ul li .off-add {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 22px;
+}
+
+.off-box ul li .off-add span {
+    font-size: 14px;
+    line-height: 30px;
+}

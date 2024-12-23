@@ -1,0 +1,171 @@
+@charset "UTF-8";
+section {
+    position: relative; /* p-container의 기준! */
+}
+
+.product-containter {
+    width: 1280px;
+    margin: 0 auto;
+    height: 100%;
+
+    /* outline: 1px solid blue; */
+
+    position: relative; /* .product-type 의 기준 */
+}
+.product-type {
+    font-size: 32px;
+    font-size: 2rem;
+    font-weight: 800; 
+
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.product-wrap ul {
+    width: 100%;
+    /* outline: 1px solid red;   */
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.product-wrap ul li {
+    width: 20%;
+    float: left;
+}
+
+
+.product-wrap ul li a {
+    width: 100%;
+    
+}
+.product-wrap ul li a:hover img {
+    opacity: 1;
+}
+.product-wrap ul li a img {
+    width: 100%;
+    opacity: 0.7;
+}
+
+.product-wrap ul li.big {
+    width: 40%;
+}
+.product-wrap ul li.big a {
+    width: 100%;
+}
+.product-wrap ul li.big a img {
+    width: 100%;
+}
+
+li.m-top {
+    margin-top: 24.7%;
+}
+li.m-left {
+    margin-left: 20%;
+}
+
+section.perfume {
+    padding-top: 80px;
+    box-sizing: border-box;
+
+    /* outline: solid black; */
+}
+
+section.perfume .pro-title .tit-wrap {
+    margin-top: 0;
+}
+section.perfume .pro-title .tit-wrap .tit {
+    font-family: "Crimson Pro", serif;
+}
+section.perfume .product-wrap {
+    /* height: 100%; */
+}
+
+.p-container {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+}
+.p-container .p-modal {
+    width: 1280px;
+    margin: 0 auto;
+    height: 100%;
+    /* outline: 1px solid lime; */
+
+    position: relative; /* .p-wrap의 기준 */
+    
+}
+#perfume {
+    display: none;
+}
+.p-container .p-modal .p-wrap {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.p-container .p-modal .p-wrap > div {
+    float: left;
+}
+.p-container .p-modal .p-wrap .p-main-img {
+    width: 50%;
+    padding: 30px;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+.p-container .p-modal .p-wrap .p-main-img img {
+    width: 100%;
+}
+
+
+.p-container .p-modal .p-wrap .p-des-wrap {
+    width: 50%;
+    margin-top: 2.5%;
+    /* padding: 300px 10px 200px; */
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+    vertical-align: middle;
+    
+
+    
+
+}
+.p-des-wrap .p-tit {
+    color: #fff;
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+.p-des-wrap .p-des {
+    font-size: 18px;
+    font-size: 1.125rem;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 15px;
+}
+.p-des-wrap .p-caption {
+    font-size: 14px;
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 30px;
+}
+
+.p-container .p-modal .modal-btn {
+    border: 1px solid #fff;
+
+    position: absolute;
+
+    top: 10%;
+    right: 0;
+}
+
+
+
+

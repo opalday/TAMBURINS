@@ -1,0 +1,345 @@
+@charset "UTF-8";
+
+section.ex {
+    background: url(../img/prdct_bg2.jpg) no-repeat center;
+    background-size: cover;
+
+    overflow: hidden;
+    /* ex-title의 기준 */
+
+    position: relative;
+}
+
+section.ex .gallery {
+    width: 250%;
+    position: relative;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+section.ex .gallery li {
+    width: 12%;
+    float: left;
+    border: 7px solid #111;
+    /* background-color: #fff; */
+    box-sizing: border-box;
+    padding: 5px;
+    margin-left: 20px;
+
+}
+
+section.ex .gallery li~li {}
+
+section.ex .gallery li a {
+    width: 100%;
+    height: 100%;
+
+    background-color: #111;
+}
+
+section.ex .gallery li a img {
+    width: 100%;
+    display: block;
+}
+
+
+section.ex .g-container {
+    width: 100%;
+    height: 100%;
+}
+
+section.ex .g-container .modal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    outline: 5px solid yellow;
+
+    /* 슬라이드 박스의 기준 */
+
+    background-color: rgba(255, 255, 255, 0.9);
+
+    display: none;
+}
+
+
+
+
+
+
+/* !!! 추가 !!!!! */
+/*.modal .s-box .inbox {
+    width: 640px;
+    슬라이드가 보여지는 공간과 동일하게 크기 설정!
+
+    position: absolute;
+    top: 10%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background-color: yellow;
+}*/
+
+
+.modal .slide-box {
+    width: 640px;
+    height: 360px;
+
+    border: 5px solid #111;
+    box-sizing: border-box;
+    outline: 1px solid red;
+
+    overflow: hidden;
+
+    position: absolute;
+    top: 15%;
+    left: 50%;
+
+    transform: translateX(-50%); 
+}
+
+/***************************** s-box 공통 css */
+.modal .s-wrap .slide-box .slide {
+    height: 100%;
+}
+
+.modal .slide-box .slide li {
+    height: 100%;
+    float: left;
+}
+
+.modal .slide-box .slide li video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal .slide-box .slide li img {
+    width: 100%;
+}
+
+/***************************** s-box 공통 css */
+
+
+.modal .slide-box .co-box {
+    width: 500%;
+}
+
+.modal .slide-box .co-box li {
+    width: 20%;
+}
+
+.modal .slide-box .sh-box {
+    width: 800%;
+}
+
+.modal .slide-box .sh-box li {
+    width: 12.5%;
+}
+
+.modal .slide-box .camo-box {
+    width: 500%;
+}
+
+.modal .slide-box .camo-box li {
+    width: 20%;
+}
+
+.modal .slide-box .balm-box {
+    width: 700%;
+}
+
+.modal .slide-box .balm-box li {
+    width: 14.28%;
+}
+
+.modal .slide-box .har-box {
+    width: 1000%;
+}
+
+.modal .slide-box .har-box li {
+    width: 10%;
+}
+
+.modal .slide-box .tf-box {
+    width: 300%;
+}
+
+.modal .slide-box .tf-box li {
+    width: 33.33%;
+}
+
+.modal .slide-box .car-box {
+    width: 800%;
+}
+
+.modal .slide-box .car-box li {
+    width: 12.5%;
+}
+
+/***************************** s-box 개별 css */
+
+.modal .p-btn {
+    outline: 1px solid red;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+}
+
+.modal .p-btn li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #111;
+
+    float: left;
+
+    overflow: hidden;
+}
+
+.modal .p-btn li~li {
+    margin-left: 5px;
+}
+
+.modal .p-btn li a {
+    width: 100%;
+    height: 100%;
+}
+
+.modal .p-btn li.active a {
+    background-color: #111;
+}
+/*  ddddddd*/
+.modal .s-btn a {
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal .s-btn .prev {
+    left: 2%;
+    left: -80px;
+}
+
+.modal .s-btn .next {
+    right: 2%;
+    right: -80px;
+}
+
+.modal .s-btn a img {
+    width: 100%;
+}
+
+.modal .des-box {
+    width: 80%;
+    
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translateX(-50%);
+    
+    
+    
+    outline: 1px solid lime;
+}
+
+.modal .des-box .des-wrap {
+
+    color: #111;
+    text-align: center;
+
+    
+
+
+}
+
+.modal .des-box .des-wrap .des-tit::before {
+    content: "";
+    display: block;
+    width: 250px;
+    height: 2px;
+    background-color: #111;
+    z-index: -1;
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.modal .des-box .des-wrap .des-tit {
+    font-size: 22px;
+    font-size: 1.375rem;
+    font-weight: 600;
+
+    margin-bottom: 30px;
+    position: relative;
+
+}
+
+
+
+
+.modal .des-box .des-wrap .des-txt {
+    font-size: 18px;
+    font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    line-height: 25px;
+    word-break: keep-all;
+    margin-bottom: 20px;
+}
+
+.modal .des-box .des-wrap .des-add {
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    line-height: 23px;
+    text-decoration: underline;
+    word-break: keep-all;
+    color: #333;
+}
+
+.modal .des-box .modal-btn {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #111;
+    cursor: pointer;
+    background-color: lime;
+
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+
+}
+
+.modal .des-box .modal-btn img {
+    width: 100%;
+}
+
+
+
+
+section.ex .ex-title {
+    margin-top: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* outline: 1px solid red; */
+
+}
+
+.ex-title .tit-wrap {}
+
+.ex-title .tit-wrap .tit {
+    font-family: "Crimson Pro", serif;
+}
+
+.ex-title .tit-wrap .sub-tit {}
