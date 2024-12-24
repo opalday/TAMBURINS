@@ -13,7 +13,7 @@ header {
     top: 0;
     z-index: 999;
 
-    /* outline: 1px solid red; */
+    
 }
 header.ac {
     border-bottom: 1px solid #111;
