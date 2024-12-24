@@ -60,11 +60,11 @@ section.new .new-banner {
 }
 section.new .new-container .new-banner h2.new-tit {
     font-family: "Crimson Pro", serif;
-    font-size: 50px;
-    font-size: 3.125rem;
+    font-size: 70px;
+    font-size: 4.3755rem;
     font-weight: 600;
     color: #fff;
-    letter-spacing: 30px;
+    letter-spacing: 50px;
     text-shadow: 0 2px 10px #fff;
     text-align: center;
 

@@ -1,50 +1,32 @@
 //store js
 
-var pageCount = 0;
-var total;
-var stat = 0;
+var autocall;
 
-$(document).ready(function () {
+$(document).ready(function(){
 
-    //마우스휠 이벤트
-    total = $('.page').length;
-    console.log('현재 페이지 갯수' + total);
+    autocall = setInterval(arFunc, 5);
 
-    $(window).on('mousewheel DOMMouseScroll', function(){
+    $('.s-img-wrap ul li:first').delay(1000).fadeIn(1000);
 
+    $('.s-img-wrap ul li:nth-child(2)').delay(1500).fadeIn(1000);
 
-        if(stat === 1) return false;
-        stat = 1;
+    $('.s-img-wrap ul li:nth-child(3').delay(2000).fadeIn(1000);
+    
+    $('.s-img-wrap ul li:nth-child(4)').delay(2500).fadeIn(1000);
+    
+    $('.s-img-wrap ul li:last').delay(3000).fadeIn(1000);
 
-        var evt = window.event;
-
-        var delta = evt.detail ? evt.detail : evt.wheelDelta;
-        console.log('마우스휠델타' + delta);
-
-        if (/Firefox/i.test(navigator.userAgent)) {
-
-            delta = -evt.detail;
-
-        }
-
-        if (delta < 0) {
-
-            pageCount++;
-            if (pageCount === total) pageCount =  total -1;
-        } else {
-
-            pageCount--;
-            if (pageCount === -1) pageCount = 0;
-        }
-
-        var pageTop = $('.page').eq(pageCount).offset().top;
-
-        $('html,body').animate({
-            scrollTop: pageTop + 'px'
-        }, 800, function(){
-            stat = 0;
-        });
-
+    $('.arrow').delay(3500).slideDown(function(){
+        autocall;
     });
 
+    // setInterval(arFunc, 5);
+
+
 });
+
+function arFunc () {
+    
+    $('.arrow').slideUp(1000);
+    $('.arrow').slideDown(1000);
+}

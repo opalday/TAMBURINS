@@ -30,7 +30,7 @@
     <header>
         <div class="header-wrap">
             <h1 class="index-logo">
-                <a href="../index.html"><img src="img/logo.png" alt="탬버린즈 로고"></a>
+                <a href="/TAMBURINS/index.html"><img src="img/logo.png" alt="탬버린즈 로고"></a>
             </h1>
 
 
@@ -74,13 +74,13 @@
     </nav>
 
     <section class="ex page"> <!-- 액자가 흘러갈 영역 -->
-
         <div class="ex-title">
             <div class="tit-wrap">
-                <h2 class="eng-font">EXHIBITION</h2>
-                <p class="sub-tit">탬버린즈 전시</p>
+                <h2 class="tit">EXHIBITION</h2>
+                <p class="ex-sub-tit">탬버린즈 전시</p>
             </div>
         </div>
+
 
         <ul class="gallery clear"> <!--슬라이드부모  -->
             <li> <!-- 슬라이드 -->
@@ -118,41 +118,46 @@
         <div class="g-container">
 
             <!-- 첫번째 모달 -->
-            
+            <div id="cocoon" class="modal">
 
-                <div id="cocoon" class="modal">
+                <!-- 슬라이드 전체 공간 (배경) -->
+                <div class="s-box">
 
-                    <div class="s-wrap">
-                    <!-- 슬라이드 보여지는 창 -->
-                    <div class="slide-box">
+                    <div class="inbox">
+                        <!-- 슬라이드 보여지는 창 -->
+                        <div class="slide-box">
 
-                        <!-- 전체 슬라이드 담는 공간 -->
-                        <ul class="slide co-box">
+                            <!-- 전체 슬라이드 담는 공간 -->
+                            <ul class="slide co-box">
 
-                            <li>
-                                <video muted autoplay loop>
-                                    <source src="img/07_cocoon/Exhibition1.mp4" type="video/mp4">
-                                </video>
-                            </li>
-                            <li><img src="img/07_cocoon/Exhibition2.jpg" alt="코쿤컬렉션 이미지 2"></li>
-                            <li><img src="img/07_cocoon/Exhibition3.jpg" alt="코쿤컬렉션 이미지 3"></li>
-                            <li><img src="img/07_cocoon/Exhibition4.jpg" alt="코쿤컬렉션 이미지 4"></li>
-                            <li><img src="img/07_cocoon/Exhibition5.jpg" alt="코쿤컬렉션 이미지 5"></li>
+                                <li>
+                                    <video muted autoplay loop>
+                                        <source src="img/07_cocoon/Exhibition1.mp4" type="video/mp4">
+                                    </video>
+                                </li>
+                                <li><img src="img/07_cocoon/Exhibition2.jpg" alt="코쿤컬렉션 이미지 2"></li>
+                                <li><img src="img/07_cocoon/Exhibition3.jpg" alt="코쿤컬렉션 이미지 3"></li>
+                                <li><img src="img/07_cocoon/Exhibition4.jpg" alt="코쿤컬렉션 이미지 4"></li>
+                                <li><img src="img/07_cocoon/Exhibition5.jpg" alt="코쿤컬렉션 이미지 5"></li>
 
-                        </ul>
+                            </ul>
 
-                        <ul id="pager" class="p-btn clear">
-                            <li class="active"><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                        </ul>
+                        </div>
 
+                        <div class="s-btn">
+                            <a href="#" class="prev"><img src="img/prev_btn.png" alt="이전 버튼"></a>
+                            <a href="#" class="next"><img src="img/next_btn.png" alt="다음 버튼"></a>
+                        </div>
+
+                        <div class="modal-btn">
+                            <img src="img/x-btn.png" alt="닫기 버튼">
+                        </div>
 
                     </div>
-                    <div>
 
+
+
+                    <!-- des 전체 공간 -->
                     <div class="des-box">
 
                         <div class="des-wrap">
@@ -177,24 +182,19 @@
                         </div>
 
                         
-
-
-
                     </div>
 
-                    <!-- des 전체 공간 -->
-
-                    <div class="modal-btn">
-                            <img src="img/x-btn.png" alt="닫기 버튼">
-                        </div>
+                    
                 </div>
 
+
+            </div>
 
             <!-- 두번째 모달 -->
             <div id="showery" class="modal">
 
                 <!-- 슬라이드 전체 공간 (배경) -->
-                <div class="s-box g-box">
+                <div class="s-box">
 
                     <div class="inbox">
                         <!-- 슬라이드 보여지는 창 -->
@@ -228,6 +228,10 @@
                             <a href="#" class="prev"><img src="img/prev_btn.png" alt="이전 버튼"></a>
                             <a href="#" class="next"><img src="img/next_btn.png" alt="다음 버튼"></a>
                         </div>
+
+                        <div class="modal-btn">
+                            <img src="img/x-btn.png" alt="닫기 버튼">
+                        </div>
                     </div>
 
 
@@ -238,7 +242,7 @@
                 </div>
 
                 <!-- des 전체 공간 -->
-                <div class="des-box g-box">
+                <div class="des-box">
 
                     <div class="des-wrap">
                         <h3 class="des-tit">샤워리바디 컬렉션</h3>
@@ -258,9 +262,7 @@
 
                     </div>
 
-                    <div class="modal-btn">
-                        <img src="img/x-btn.png" alt="닫기 버튼">
-                    </div>
+                    
                 </div>
             </div>
 
@@ -268,7 +270,7 @@
             <div id="camo" class="modal">
 
                 <!-- 슬라이드 전체 공간 (배경) -->
-                <div class="s-box g-box">
+                <div class="s-box">
 
                     <div class="inbox">
                         <!-- 슬라이드 보여지는 창 -->
@@ -292,13 +294,17 @@
                             <a href="#" class="prev"><img src="img/prev_btn.png" alt="이전 버튼"></a>
                             <a href="#" class="next"><img src="img/next_btn.png" alt="다음 버튼"></a>
                         </div>
+
+                        <div class="modal-btn">
+                            <img src="img/x-btn.png" alt="닫기 버튼">
+                        </div>
                     </div>
 
 
                 </div>
 
                 <!-- des 전체 공간 -->
-                <div class="des-box g-box">
+                <div class="des-box">
 
                     <div class="des-wrap">
                         <h3 class="des-tit">향수 컬렉션</h3>
@@ -317,10 +323,6 @@
                             2022. 09. 30 - 2022. 10. 30
                         </p>
 
-                    </div>
-
-                    <div class="modal-btn">
-                        <img src="img/x-btn.png" alt="닫기 버튼">
                     </div>
 
                 </div>
@@ -358,6 +360,10 @@
                             <a href="#" class="prev"><img src="img/prev_btn.png" alt="이전 버튼"></a>
                             <a href="#" class="next"><img src="img/next_btn.png" alt="다음 버튼"></a>
                         </div>
+
+                        <div class="modal-btn">
+                            <img src="img/x-btn.png" alt="닫기 버튼">
+                        </div>
                     </div>
 
                 </div>
@@ -382,9 +388,7 @@
 
                     </div>
 
-                    <div class="modal-btn">
-                        <img src="img/x-btn.png" alt="닫기 버튼">
-                    </div>
+                    
 
                 </div>
 
@@ -394,7 +398,7 @@
             <div id="harvest" class="modal">
 
                 <!-- 슬라이드 전체 공간 (배경) -->
-                <div class="s-box g-box">
+                <div class="s-box">
 
                     <div class="inbox">
                         <!-- 슬라이드 보여지는 창 -->
@@ -432,13 +436,17 @@
                             <a href="#" class="prev"><img src="img/prev_btn.png" alt="이전 버튼"></a>
                             <a href="#" class="next"><img src="img/next_btn.png" alt="다음 버튼"></a>
                         </div>
+
+                        <div class="modal-btn">
+                            <img src="img/x-btn.png" alt="닫기 버튼">
+                        </div>
                     </div>
 
 
                 </div>
 
                 <!-- des 전체 공간 -->
-                <div class="des-box g-box">
+                <div class="des-box">
 
                     <div class="des-wrap">
                         <h3 class="des-tit">하베스트 퍼퓸 비누 컬렉션</h3>
@@ -457,9 +465,7 @@
 
                     </div>
 
-                    <div class="modal-btn">
-                        <img src="img/x-btn.png" alt="닫기 버튼">
-                    </div>
+                    
 
                 </div>
 
@@ -470,7 +476,7 @@
             <div id="toilet" class="modal">
 
                 <!-- 슬라이드 전체 공간 (배경) -->
-                <div class="s-box g-box">
+                <div class="s-box">
 
                     <div class="inbox">
                         <!-- 슬라이드 보여지는 창 -->
@@ -479,11 +485,11 @@
                             <!-- 전체 슬라이드 담는 공간 -->
                             <ul class="slide tf-box">
 
-                                <li><img src="img/02_toilet_fragrance/pc_hausdosan_tf01.jpg" alt="하베스트 퍼퓸 비누 컬렉션 이미지 1">
+                                <li><img src="img/02_toilet_fragrance/pc_hausdosan_tf01.jpg" alt="토일렛 프래그런스 컬렉션 이미지 1">
                                 </li>
-                                <li><img src="img/02_toilet_fragrance/pc_hausdosan_tf02.jpg" alt="하베스트 퍼퓸 비누 컬렉션 이미지 2">
+                                <li><img src="img/02_toilet_fragrance/pc_hausdosan_tf02.jpg" alt="토일렛 프래그런스 컬렉션 이미지 2">
                                 </li>
-                                <li><img src="img/02_toilet_fragrance/pc_hausdosan_tf02.jpg" alt="하베스트 퍼퓸 비누 컬렉션 이미지 3">
+                                <li><img src="img/02_toilet_fragrance/pc_hausdosan_tf03.jpg" alt="토일렛 프래그런스 컬렉션 이미지 3">
                                 </li>
 
                             </ul>
@@ -494,13 +500,17 @@
                             <a href="#" class="prev"><img src="img/prev_btn.png" alt="이전 버튼"></a>
                             <a href="#" class="next"><img src="img/next_btn.png" alt="다음 버튼"></a>
                         </div>
+
+                        <div class="modal-btn">
+                            <img src="img/x-btn.png" alt="닫기 버튼">
+                        </div>
                     </div>
 
 
                 </div>
 
                 <!-- des 전체 공간 -->
-                <div class="des-box g-box">
+                <div class="des-box">
 
                     <div class="des-wrap">
                         <h3 class="des-tit">토일렛 프래그런스 컬렉션</h3>
@@ -519,9 +529,7 @@
 
                     </div>
 
-                    <div class="modal-btn">
-                        <img src="img/x-btn.png" alt="닫기 버튼">
-                    </div>
+                    
 
 
                 </div>
@@ -533,7 +541,7 @@
             <div id="car" class="modal">
 
                 <!-- 슬라이드 전체 공간 (배경) -->
-                <div class="s-box g-box">
+                <div class="s-box">
 
                     <div class="inbox">
                         <!-- 슬라이드 보여지는 창 -->
@@ -559,12 +567,16 @@
                             <a href="#" class="prev"><img src="img/prev_btn.png" alt="이전 버튼"></a>
                             <a href="#" class="next"><img src="img/next_btn.png" alt="다음 버튼"></a>
                         </div>
+
+                        <div class="modal-btn">
+                            <img src="img/x-btn.png" alt="닫기 버튼">
+                        </div>
                     </div>
 
                 </div>
 
                 <!-- des 전체 공간 -->
-                <div class="des-box g-box">
+                <div class="des-box">
 
                     <div class="des-wrap">
                         <h3 class="des-tit">카디퓨저 컬렉션</h3>
@@ -584,9 +596,7 @@
 
                     </div>
 
-                    <div class="modal-btn">
-                        <img src="img/x-btn.png" alt="닫기 버튼">
-                    </div>
+                    
 
                 </div>
 
@@ -594,7 +604,7 @@
 
         </div>
 
-
+        
     </section>
 
 
@@ -602,7 +612,7 @@
         <div class="footer-inner">
 
             <p class="footer-logo">
-                <a href="../index.html">&copy; Tamburins</a>
+                <a href="/TAMBURINS/index.html">&copy; Tamburins</a>
             </p>
 
             <div class="footer-list">

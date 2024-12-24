@@ -17,15 +17,18 @@
      <link rel="stylesheet" href="../css/header.css">
      <link rel="stylesheet" href="css/japan_store.css">
      <link rel="stylesheet" href="../css/footer.css">
- 
-     <script src="js/jquery-1.12.4.min.js"></script>
+    
+     <script src="js/jquery-1.7.2.min.js"></script>
+     <!-- <script src="js/jquery-1.12.4.min.js"></script> -->
      <script src="../js/common.js"></script>
+     <script src="js/store_common.js"></script>
+     <script src="js/japan_store.js"></script>
 </head>
 <body>
     <header>
         <div class="header-wrap">
             <h1 class="index-logo">
-                <a href="index.html"><img src="img/logo.png" alt="탬버린즈 로고"></a>
+                <a href="/TAMBURINS/index.html"><img src="img/logo.png" alt="탬버린즈 로고"></a>
             </h1>
 
 
@@ -75,19 +78,21 @@
         </div>
     </nav>
 
-    <section class="tab-menu">
-        <div class="tab-wrap">
-            <ul class="clear">
-                <li class="tab"><a href="store.html">대한민국</a></li>
-                <li class="tab tab-btn"><a href="japan_store.html">일본</a></li>
-                <li class="tab"><a href="china_store.html">중국</a></li>
-                <li class="tab"><a href="offline.html">입점처</a></li>
-            </ul>
-        </div>
-    </section>
+    
 
     <section class="page s-main">
-        <div class="inner">
+        <div class="tab-menu">
+            <div class="tab-wrap">
+                <ul class="clear">
+                    <li class="tab"><a href="store.html">대한민국</a></li>
+                    <li class="tab tab-btn"><a href="japan_store.html">일본</a></li>
+                    <li class="tab"><a href="china_store.html">중국</a></li>
+                    <li class="tab"><a href="offline.html">입점처</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sm-inner">
             <h2 class="s-title">
                 탬버린즈의<br>일본 플래그십 스토어를 소개합니다.
             </h2>
@@ -134,6 +139,16 @@
                     </div>
                 </div>
             </div>
+
+            <ul id="pager" class="s-pager clear">
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+            </ul>
         </div>
     </section>
     
@@ -158,6 +173,11 @@
                     </div>
                 </div>
             </div>
+
+            <ul id="pager" class="s-pager clear">
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+            </ul>
         </div>
     </section>
 
@@ -166,7 +186,7 @@
         <div class="footer-inner">
 
             <p class="footer-logo">
-                <a href="index.html">&copy; Tamburins</a>
+                <a href="/TAMBURINS/index.html">&copy; Tamburins</a>
             </p>
 
             <div class="footer-list">

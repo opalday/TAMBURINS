@@ -18,8 +18,11 @@
     <link rel="stylesheet" href="css/store.css">
     <link rel="stylesheet" href="../css/footer.css">
 
-    <script src="js/jquery-1.12.4.min.js"></script>
+    <!-- <script src="js/jquery-1.12.4.min.js"></script> -->
+    <script src="js/jquery-1.7.2.min.js"></script>
     <script src="../js/common.js"></script>
+    <script src="js/store_common.js"></script>
+    <script src="js/store.js"></script>
 </head>
 
 <body>
@@ -27,7 +30,7 @@
     <header>
         <div class="header-wrap">
             <h1 class="index-logo">
-                <a href="index.html"><img src="img/logo.png" alt="탬버린즈 로고"></a>
+                <a href="/TAMBURINS/index.html"><img src="img/logo.png" alt="탬버린즈 로고"></a>
             </h1>
 
 
@@ -77,19 +80,23 @@
         </div>
     </nav>
 
-    <section class="tab-menu">
-        <div class="tab-wrap">
-            <ul class="clear">
-                <li class="tab tab-btn"><a href="store.html">대한민국</a></li>
-                <li class="tab"><a href="japan_store.html">일본</a></li>
-                <li class="tab"><a href="china_store.html">중국</a></li>
-                <li class="tab"><a href="offline.html">입점처</a></li>
-            </ul>
-        </div>
-    </section>
+
+
 
     <section class="page s-main">
-        <div class="inner">
+        <div class="tab-menu">
+            <div class="tab-wrap">
+                <ul class="clear">
+                    <li class="tab tab-btn"><a href="store.html">대한민국</a></li>
+                    <li class="tab"><a href="japan_store.html">일본</a></li>
+                    <li class="tab"><a href="china_store.html">중국</a></li>
+                    <li class="tab"><a href="offline.html">입점처</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="sm-inner">
             <h2 class="s-title">
                 탬버린즈의<br>대한민국 플래그십 스토어를 소개합니다.
             </h2>
@@ -115,32 +122,45 @@
 
     <section id="k-sinsa" class="page sinsa">
         <!-- 신사 -->
-        <div class="sinsa-con con-wrap">
-            <ul class="sinsa-s clear">
-                <li><img src="img/plag_sinsa/Sinsa1.jpg" alt="플래그십 스토어 신사1"></li>
-                <li><img src="img/plag_sinsa/Sinsa2.jpg" alt="플래그십 스토어 신사2"></li>
-                <li><img src="img/plag_sinsa/Sinsa3.jpg" alt="플래그십 스토어 신사3"></li>
-                <li><img src="img/plag_sinsa/Sinsa4.jpg" alt="플래그십 스토어 신사4"></li>
-                <li><img src="img/plag_sinsa/Sinsa5.jpg" alt="플래그십 스토어 신사5"></li>
-                <li><img src="img/plag_sinsa/Sinsa6.jpg" alt="플래그십 스토어 신사6"></li>
-                <li><img src="img/plag_sinsa/Sinsa7.jpg" alt="플래그십 스토어 신사7"></li>
-            </ul>
-            <div class="s-caption ">
-                <div class="s-inner">
-                    <h3 class="s-name">플래그십 스토어 신사</h3>
-                    <div class="s-add-wrap">
-                        <p class="s-add">
-                            서울 강남구 압구정로10길 44<br>
-                            +82 02 511 1246
-                        </p>
-                        <div class="s-map">
-                            <a href="#">구글맵</a>
-                            <a href="#">네이버지도</a>
+        
+            <div class="sinsa-con con-wrap">
+                <ul class="sinsa-s clear">
+                    <li><img src="img/plag_sinsa/Sinsa1.jpg" alt="플래그십 스토어 신사1"></li>
+                    <li><img src="img/plag_sinsa/Sinsa2.jpg" alt="플래그십 스토어 신사2"></li>
+                    <li><img src="img/plag_sinsa/Sinsa3.jpg" alt="플래그십 스토어 신사3"></li>
+                    <li><img src="img/plag_sinsa/Sinsa4.jpg" alt="플래그십 스토어 신사4"></li>
+                    <li><img src="img/plag_sinsa/Sinsa5.jpg" alt="플래그십 스토어 신사5"></li>
+                    <li><img src="img/plag_sinsa/Sinsa6.jpg" alt="플래그십 스토어 신사6"></li>
+                    <li><img src="img/plag_sinsa/Sinsa7.jpg" alt="플래그십 스토어 신사7"></li>
+                </ul>
+                <div class="s-caption ">
+                    <div class="s-inner">
+                        <h3 class="s-name">플래그십 스토어 신사</h3>
+                        <div class="s-add-wrap">
+                            <p class="s-add">
+                                서울 강남구 압구정로10길 44<br>
+                                +82 02 511 1246
+                            </p>
+                            <div class="s-map">
+                                <a href="#">구글맵</a>
+                                <a href="#">네이버지도</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
+                <ul id="pager" class="s-pager clear">
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                </ul>
+                
+                
             </div>
-        </div>
     </section>
 
     <!-- 도산 -->
@@ -172,6 +192,14 @@
                     </div>
                 </div>
             </div>
+
+            <ul id="pager" class="s-pager clear">
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
         </div>
     </section>
 
@@ -200,8 +228,17 @@
                     </div>
                 </div>
             </div>
+
+            <ul id="pager" class="s-pager clear">
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+            </ul>
         </div>
     </section>
+    
+    
     <!-- 성수 -->
     <section id="k-seongsu" class="page seongsu">
         <div class="seongsu-con con-wrap">
@@ -229,8 +266,20 @@
                     </div>
                 </div>
             </div>
+
+            <ul id="pager" class="s-pager clear">
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+            </ul>
         </div>
     </section>
+
+
     <!-- 한남 -->
     <section id="k-hannam" class="page hannam">
         <div class="hannam-con con-wrap">
@@ -261,13 +310,20 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <ul class="pager">
-            <li id="btn0" class="on"><a href="#"></a></li>
-            <li id="btn1"><a href="#"></a></li>
-            <li id="btn2"><a href="#"></a></li>
-        </ul>
+            <ul id="pager" class="s-pager clear">
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">10</a></li>
+            </ul>
+        </div>
 
     </section>
 
@@ -277,7 +333,7 @@
         <div class="footer-inner">
 
             <p class="footer-logo">
-                <a href="index.html">&copy; Tamburins</a>
+                <a href="/TAMBURINS/index.html">&copy; Tamburins</a>
             </p>
 
             <div class="footer-list">

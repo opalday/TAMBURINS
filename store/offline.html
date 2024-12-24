@@ -18,8 +18,11 @@
     <link rel="stylesheet" href="css/offline.css">
     <link rel="stylesheet" href="../css/footer.css">
 
-    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <!-- <script src="js/jquery-1.12.4.min.js"></script> -->
     <script src="../js/common.js"></script>
+    <script src="js/store_common.js"></script>
+    <script src="js/offline.js"></script>
 </head>
 
 <body>
@@ -27,7 +30,7 @@
     <header>
         <div class="header-wrap">
             <h1 class="index-logo">
-                <a href="index.html"><img src="img/logo.png" alt="탬버린즈 로고"></a>
+                <a href="/TAMBURINS/index.html"><img src="img/logo.png" alt="탬버린즈 로고"></a>
             </h1>
 
 
@@ -77,18 +80,44 @@
         </div>
     </nav>
 
-    <section class="tab-menu">
-        <div class="tab-wrap">
-            <ul class="clear">
-                <li class="tab"><a href="store.html">대한민국</a></li>
-                <li class="tab"><a href="japan_store.html">일본</a></li>
-                <li class="tab"><a href="china_store.html">중국</a></li>
-                <li class="tab  tab-btn"><a href="offline.html">입점처</a></li>
-            </ul>
+
+
+    <section class="off-main page">
+        <div class="tab-menu">
+            <div class="tab-wrap">
+                <ul class="clear">
+                    <li class="tab"><a href="store.html">대한민국</a></li>
+                    <li class="tab"><a href="japan_store.html">일본</a></li>
+                    <li class="tab"><a href="china_store.html">중국</a></li>
+                    <li class="tab tab-btn"><a href="offline.html">입점처</a></li>
+                </ul>
+            </div>
         </div>
+
+        <div class="off-title">
+            <h2 class="s-title">
+                탬버린즈의<br>오프라인 판매처를 소개합니다.
+            </h2>
+            <div class="s-img-wrap">
+                <div class="img-box">
+                    <img src="img/city.png" alt="시티 그림">
+                </div>
+            </div>
+
+            <div class="arrow">
+                <p class="caption">scroll</p>
+                <div class="arrow-img">
+                    <img src="img/arrow1.png" alt="화살표 이미지">
+                </div>
+
+            </div>
+        </div>
+
+
     </section>
 
     <section class="off-con page">
+
         <div class="inner">
             <div class="off-box">
                 <h2 class="off-type">면세점</h2>
@@ -252,7 +281,7 @@
         <div class="footer-inner">
 
             <p class="footer-logo">
-                <a href="index.html">&copy; Tamburins</a>
+                <a href="/TAMBURINS/index.html">&copy; Tamburins</a>
             </p>
 
             <div class="footer-list">

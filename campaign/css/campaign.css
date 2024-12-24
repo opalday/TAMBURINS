@@ -1,5 +1,11 @@
 @charset "UTF-8";
-
+section {
+    background-image: url('../img/back-left.png'), url('../img/back-right.png');
+    background-repeat: repeat-y;
+    background-position: left center, right center;
+ 
+    
+}
 .container > article {
     display: none;
 }

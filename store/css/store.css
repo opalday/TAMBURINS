@@ -7,6 +7,23 @@ section {
     /* con-wrap의 기준 */
 }
 
+.sm-inner {
+    width: 1280px;
+    margin: 0 auto;
+    height: 100%;
+
+    padding-top: 80px;
+    box-sizing: border-box;
+}
+
+.tab-menu {
+    width: 100%;
+    margin-top: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+}
+
 .con-wrap {
     width: 1280px;
 
@@ -15,10 +32,11 @@ section {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -45%);
 
     overflow: hidden;
     /* s-caption의 기준! */
+    
 }
 
 video {
@@ -91,6 +109,46 @@ ul {
     text-decoration: underline;
 }
 
+.con-wrap .s-pager {
+    padding: 0 10px;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* outline: 1px solid red; */
+}
+.con-wrap .s-pager li {
+    width: 20px;
+    height: 20px;
+    /* border-radius: 50%; */
+    border: 1px solid #111;
+    
+    text-align: center;
+    overflow: hidden;
+
+    float: left;
+
+    /* outline: 1px solid red; */
+}
+.con-wrap .s-pager li.active a {
+    color: #fff;
+    background-color: #111;
+}
+.con-wrap .s-pager li ~ li {
+    margin-left: 10px;
+}
+.con-wrap .s-pager li a {
+    font-size: 14px;
+    line-height: 20px;
+    width: 100%;
+    height: 100%;
+    color: #111;
+    background-color: #fff;
+}
+
+
+
 /*************************** store 공통 css */
 section.s-main {
     /* position: relative;/// */
@@ -109,6 +167,8 @@ section.s-main .s-title {
     font-weight: 800;
     text-align: center;
     margin-bottom: 80px;
+
+    display: none;
 }
 section.s-main .s-img-wrap {
     width: 100%;
@@ -131,6 +191,8 @@ section.s-main .s-img-wrap ul li {
     position: relative;
 
     float: left;
+
+    display: none;
 }
 section.s-main .s-img-wrap ul li ~ li {
     margin-left: 20px;
@@ -138,9 +200,7 @@ section.s-main .s-img-wrap ul li ~ li {
 }
 section.s-main .s-img-wrap ul li img {
     width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+   
 }
 
 
@@ -151,6 +211,8 @@ section.s-main .arrow {
     bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
+
+    display: none;
 }
 section.s-main .arrow .caption {
     font-size: 14px;
