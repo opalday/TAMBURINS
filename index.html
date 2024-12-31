@@ -13,12 +13,12 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/header_2.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/footer.css">
 
+    <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/jquery-1.7.2.min.js"></script>
-    <!-- <script src="js/jquery-1.12.4.min.js"></script> -->
     <script src="js/index.js"></script>
     <script src="js/common.js"></script>
 
@@ -44,13 +44,13 @@
 
     </header>
 
-    <nav>
+    <nav class="m-gnb">
         <div class="inner">
             <div class="gnb">
                 <ul class="gnb-list">
                     <li><a href="about/about.html">ABOUT</a></li>
                     <li><a href="exhibition/exhibition.html">EXHIBITION</a></li>
-                    <li><a href="campaign/campaign.html">CAMPAIGN</a></li>
+                    <li><a href="campaign/campaign_SOLACE.html">CAMPAIGN</a></li>
                     <li><a href="product/product.html">PRODUCT</a></li>
                     <li><a href="store/store.html">STORE INFO</a></li>
                     <li><a href="https://www.tamburins.com/kr/" target="_blank">ONLINE STORE</a></li>
@@ -73,7 +73,7 @@
         </div>
     </nav>
 
-    <main class="page">
+    <main id="main-sec" class="page">
         <div class="main-video">
             <video muted autoplay loop>
                 <source src="video/TAMBURINS_x_JENNIE_PERFUME_[SOLACE].mp4" type="video/mp4">
@@ -81,7 +81,7 @@
         </div>
     </main>
 
-    <section class="page new">
+    <section id="new-sec" class="page new">
 
         <article class="new-container">
 
@@ -226,7 +226,7 @@
         
     </section>
 
-    <section class="page sns">
+    <section id="sns-sec" class="page sns">
         <div class="sns-container">
             <div class="sns-des">
                 <h2 class="sns-tit">
@@ -287,7 +287,7 @@
         </div>
     </section>
 
-    <section class="page store">
+    <section id="store-sec" class="page store">
 
         <div class="store-container">
 
@@ -343,6 +343,15 @@
         </div>
 
     </section>
+
+    <nav class="side-pager">
+        <ul>
+            <li class="on"><a href="#main-sec"><span>MAIN</span></a></li>
+            <li><a href="#new-sec"><span>NEW</span></a></li>
+            <li><a href="#sns-sec"><span>SNS</span></a></li>
+            <li><a href="#store-sec"><span>STORE</span></a></li>
+        </ul>
+    </nav>
 
     <footer class="page">
         <div class="footer-inner">

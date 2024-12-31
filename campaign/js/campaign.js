@@ -2,21 +2,40 @@
 
 $(document).ready(function(){
 
-    $('.tab-menu li a').click(function(e){
+   $('.cam-tit').animate({
+        opacity: 1
+   }, 1000);
+
+   $('.cam-des').delay(1000).animate({
+    opacity: 1,
+    top: 0
+}, 600 );
+    
+
+    // $('.cam-box').click(function(){
+
+    //     $(this).animate({
+    //         width: '39%'
+    //     }, 500).siblings().animate({
+    //         width: '6.777%'
+    //     }, 200);
+
+    // });
+
+    $('.cam-box a').click(function(e){
 
         e.preventDefault();
 
-        var aIdx = $(this).parent().index();
+        
 
-        //선택된 탭메뉴 디자인 변경
-        $(this).parent().addClass('tab-btn').siblings().removeClass('tab-btn');
+      /*   $(this).parent().animate({
+            width: '39%'
+        }, 500).siblings().animate({
+            width: '6.777%'
+        }); */
 
-        //내용변경
-        $('article').eq(aIdx).addClass('on').siblings().removeClass('on');
-
+        $(this).parent().addClass('on').siblings().removeClass('on');
     });
 
-
-
-
+  
 });

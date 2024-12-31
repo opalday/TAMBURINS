@@ -1,10 +1,22 @@
 @charset "UTF-8";
 
+html, body {
+    overflow: hidden;
+}
+
 section {
 /* outline: 3px solid red; */
     
     position: relative;
     /* con-wrap의 기준 */
+}
+
+.tab-menu {
+    width: 100%;
+    margin-top: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
 }
 
 .sm-inner {
@@ -14,14 +26,6 @@ section {
 
     padding-top: 80px;
     box-sizing: border-box;
-}
-
-.tab-menu {
-    width: 100%;
-    margin-top: 0;
-    position: absolute;
-    top: 80px;
-    left: 0;
 }
 
 .con-wrap {
@@ -145,6 +149,8 @@ ul {
     height: 100%;
     color: #111;
     background-color: #fff;
+
+    outline: 3px solid red;
 }
 
 
@@ -198,11 +204,35 @@ section.s-main .s-img-wrap ul li ~ li {
     margin-left: 20px;
 
 }
+
 section.s-main .s-img-wrap ul li img {
     width: 100%;
    
 }
 
+section.s-main .s-img-wrap ul li .con-hover {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+    display: none;
+}
+section.s-main .s-img-wrap ul li .con-hover p {
+    color: #fff;
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 section.s-main .arrow {
     text-align: center;
@@ -234,10 +264,12 @@ section.s-main .arrow .arrow-img img {
 section.sinsa .sinsa-con {}
 .sinsa-con .sinsa-s {
     width: 700%;
+
+    
     /* outline: 3px solid lime; */
 }
 .sinsa-con .sinsa-s li {
-    width: 14.28%;
+    width: 14.285%;
     float: left;
     /* outline: 5px solid blue; */
 }
@@ -286,7 +318,7 @@ section.seongsu .seongsu-con {}
     /* outline: 3px solid lime; */
 }
 .seongsu-con .seongsu-s li {
-    width: 14.28%;
+    width: 14.285%;
     float: left;
     /* outline: 5px solid blue; */
 }
@@ -315,3 +347,54 @@ section.hannam .hannam-con {}
 }
 
 /* 한남 css 끝 */
+
+nav.side-pager {
+    /* outline: 5px solid red; */
+
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+
+    z-index: 777;
+}
+nav.side-pager ul {}
+nav.side-pager ul li {
+    float: none;
+    margin: 10px 0;
+}
+nav.side-pager ul li a {
+    color: #111;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #111;
+    box-sizing: border-box;
+    position: relative; /* span의 기준! */
+
+    /* outline: 1px solid red; */
+}
+nav.side-pager ul li span { /* 메뉴글자 */
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    position: absolute;
+    left: 200%;
+    top: -6px;
+
+    width: 100px;
+    letter-spacing: 2px;
+
+    display: none;
+}
+
+nav.side-pager ul li a:hover span {
+    display: block;
+}
+
+/* 선택된 페이저 디자인 */
+nav.side-pager ul li.on a {
+    background-color: #111;
+}
+nav.side-pager ul li.on a span {
+    display: block;
+}

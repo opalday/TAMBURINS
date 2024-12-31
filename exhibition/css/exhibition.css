@@ -1,6 +1,10 @@
 @charset "UTF-8";
 
+
 section.ex {
+    padding-top: 80px;
+    box-sizing: border-box;
+
     background: url(../img/prdct_bg2.jpg) no-repeat center;
     background-size: cover;
 
@@ -10,16 +14,11 @@ section.ex {
 
 section.ex .ex-title {
     width: 100%;
-    
-
-    position: absolute;
-    top: 30px;
-   
+    padding: 10px 0;
 }
 .ex-title .tit-wrap {
     width: 100%;
-
-    
+    margin: 0;
 }
 .ex-title .tit-wrap .tit{
     font-family: "Crimson Pro", serif;
@@ -47,7 +46,7 @@ section.ex .ex-title {
 
 section.ex .gallery {
     width: 250%;
-    position: relative;
+    position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -96,18 +95,25 @@ section.ex .g-container {
     width: 100%;
     height: 100%;
 
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    background-color: rgba(255,255,255,0.9);
+
+    display: none;
+
     
 
 }
 
-section.ex .g-container .modal {
+section.ex .g-container .s-box {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
 
-    background-color: rgba(255,255,255,0.9);
+    height: calc(100% - 80px);
+    margin-top: 80px;
+
+    position: relative; /* .inbox의 기준! */
 
     display: none;
 }
@@ -115,20 +121,8 @@ section.ex .g-container .modal {
 
 
 
-.modal .s-box {
-    width: 100%;
-    height: 100%;
-
-    /* background-color: rgba(255,255,255,0.9); */
-    position: relative;
-
-    /* 슬라이드, des박스 기준, modalbutton */
-
-    /* outline: 1px solid red; */
-}
-
 /* !!! 추가 !!!!! */
-.modal .s-box .inbox {
+.s-box .inbox {
     width: 640px; /* 슬라이드가 보여지는 공간과 동일하게 크기 설정! */
 
     position: absolute;
@@ -140,14 +134,14 @@ section.ex .g-container .modal {
     /* background-color: yellow; */
 }
 
-.modal .s-box .slide-box {
+.s-box .slide-box {
     width: 640px;
     height: 360px;
     
     border: 5px solid #111;
     box-sizing: border-box;
 
-    overflow: hidden;
+    /* overflow: hidden; */
 
     /* position: absolute;
     top: 50%;
@@ -156,75 +150,75 @@ section.ex .g-container .modal {
     transform: translate(-50%, -50%); */
 }
 /***************************** s-box 공통 css */
-.modal .s-box .slide-box .slide {
+.s-box .slide-box .slide {
     height: 100%;
 }
-.modal .s-box .slide-box .slide li {
+.s-box .slide-box .slide li {
     height: 100%;
     float: left;
 }
-.modal .s-box .slide-box .slide li video {
+.s-box .slide-box .slide li video {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.modal .s-box .slide-box .slide li img {
+.s-box .slide-box .slide li img {
     width: 100%;
 }
 /***************************** s-box 공통 css */
 
 
-.modal .s-box .slide-box .co-box {
+.s-box .slide-box .co-box {
     width: 500%;
 }
-.modal .s-box .slide-box .co-box li {
+.s-box .slide-box .co-box li {
     width: 20%;
 }
 
-.modal .s-box .slide-box .sh-box {
+.s-box .slide-box .sh-box {
     width: 800%;
 }
-.modal .s-box .slide-box .sh-box li {
+.s-box .slide-box .sh-box li {
     width: 12.5%;
 }
 
-.modal .s-box .slide-box .camo-box{
+.s-box .slide-box .camo-box{
     width: 500%;
 }
-.modal .s-box .slide-box .camo-box li{
+.s-box .slide-box .camo-box li{
     width: 20%;
 }
 
-.modal .s-box .slide-box .balm-box {
+.s-box .slide-box .balm-box {
     width: 700%;
 }
-.modal .s-box .slide-box .balm-box li {
-    width: 14.28%;
+.s-box .slide-box .balm-box li {
+    width: 14.285%;
 }
 
-.modal .s-box .slide-box .har-box {
+.s-box .slide-box .har-box {
     width: 1000%;
 }
-.modal .s-box .slide-box .har-box li {
+.s-box .slide-box .har-box li {
     width: 10%;
 }
 
-.modal .s-box .slide-box .tf-box{
+.s-box .slide-box .tf-box{
     width: 300%;
 }
-.modal .s-box .slide-box .tf-box li {
+.s-box .slide-box .tf-box li {
     width: 33.33%;
 }
 
-.modal .s-box .slide-box .car-box {
+.s-box .slide-box .car-box {
     width: 800%;
 }
-.modal .s-box .slide-box .car-box li {
+.s-box .slide-box .car-box li {
     width: 12.5%;
 }
 
 /***************************** s-box 개별 css */
-.modal .s-box .s-btn a {
+.s-box .s-btn a {
     width: 40px;
     height: 40px;
 
@@ -232,22 +226,22 @@ section.ex .g-container .modal {
     top: 50%;
     transform: translateY(-50%);
 }
-.modal .s-box .s-btn .prev {
+.s-box .s-btn .prev {
     left: 2%;
     left: -80px;
 
 
     /* display: none; */
 }
-.modal .s-box .s-btn .next {
+.s-box .s-btn .next {
     right: 2%;
     right: -80px;
 }
 
-.modal .s-box .s-btn a img {
+.s-box .s-btn a img {
     width: 100%;
 }
-.modal .inbox .modal-btn{
+.s-box .inbox .modal-btn{
     width: 20px;
     height: 20px;
     border: 1px solid #111;
@@ -259,11 +253,11 @@ section.ex .g-container .modal {
     right: -10%;
     /* background-color: lime; */
 }
-.modal .inbox .modal-btn img {
+.inbox .modal-btn img {
     width: 100%;
 }
 
-.modal .des-box {
+.s-box .des-box {
     width: 1280px;
 
     /* background-color: rgba(255,255,255,0.9); */
@@ -275,7 +269,7 @@ section.ex .g-container .modal {
     
 
 }
-.modal .des-box .des-wrap {
+.s-box .des-box .des-wrap {
     width: 100%;
     padding: 0 50px;
     box-sizing: border-box;
@@ -287,7 +281,7 @@ section.ex .g-container .modal {
     
 }
 
-.modal .des-box .des-wrap .des-tit {
+.s-box .des-box .des-wrap .des-tit {
     font-size: 24px;
     font-size: 1.5rem;
     font-weight: 600;
@@ -297,7 +291,7 @@ section.ex .g-container .modal {
     /* before 기준 */
 
 }
-.modal .des-box .des-wrap .des-tit::before {
+.s-box .des-box .des-wrap .des-tit::before {
     content: "";
     display: block;
     width: 250px;
@@ -314,7 +308,7 @@ section.ex .g-container .modal {
 
 
 
-.modal .des-box .des-wrap .des-txt {
+.s-box .des-box .des-wrap .des-txt {
     font-size: 18px;
     font-size: 1.125rem;
     font-weight: 400;
@@ -323,7 +317,7 @@ section.ex .g-container .modal {
     word-break: keep-all;
     margin-bottom: 20px;
 }
-.modal .des-box .des-wrap .des-add {
+.s-box .des-box .des-wrap .des-add {
     font-weight: 400;
     letter-spacing: 1.2px;
     line-height: 23px;

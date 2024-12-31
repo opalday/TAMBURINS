@@ -4,7 +4,7 @@
 $(window).scroll(function(){
     var wTop = $(this).scrollTop();
 
-    $('nav').css({
+    $('nav.m-gnb').css({
         top: wTop
      
     });
@@ -52,7 +52,7 @@ $(document).ready(function(){
 
     $('header .menu-btn').click(function(){
 
-        $('nav').slideToggle(600);
+        $('nav.m-gnb').slideToggle(600);
     });
 
 

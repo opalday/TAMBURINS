@@ -1,4 +1,8 @@
 @charset "UTF-8";
+html, body {
+    overflow: hidden;
+}
+
 section {
     position: relative; /* p-container의 기준! */
 }

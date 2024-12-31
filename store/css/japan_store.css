@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+html, body {
+    overflow: hidden;
+}
+
 section {
 /* outline: 3px solid red; */
     
@@ -170,9 +174,12 @@ section.s-main .s-title {
 section.s-main .s-img-wrap {
     width: 100%;
     position: relative;
+    top: 20px;
     /* ul 의 기준 */
     
     /* outline: 1px solid red; */
+
+    
   
 }
 section.s-main .s-img-wrap ul {
@@ -202,6 +209,31 @@ section.s-main .s-img-wrap ul li:last-child {
 section.s-main .s-img-wrap ul li img {
     width: 100%;
    
+}
+
+section.s-main .s-img-wrap ul li .con-hover {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+    display: none;
+}
+section.s-main .s-img-wrap ul li .con-hover p {
+    width: 100%;
+    color: #fff;
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -238,7 +270,7 @@ section.aoyama .aoyama-con {}
     /* outline: 3px solid lime; */
 }
 .aoyama-con .aoyama-s li {
-    width: 14.28%;
+    width: 14.285%;
     float: left;
     /* outline: 5px solid blue; */
 }

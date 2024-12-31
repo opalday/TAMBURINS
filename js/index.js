@@ -45,6 +45,47 @@ $(document).ready(function () {
             stat = 0;
         });
 
+        menuChg();
+
+        if(pageCount === total - 1){
+            $('.side-pager li').removeClass('on');
+        }
+
+        if (pageCoun === 1) {
+            $('header')
+        }
+
+    });
+
+    $('.side-pager a').on('click', function(e){
+
+        e.preventDefault();
+
+        var idx = $(this).parent().index();
+        console.log(idx);
+
+        pageCount = idx;
+        console.log('변경된 pageCount번호: ' + pageCount);
+
+        //스크롤 이동거리 구하기(1) - pageCount 또는 idx 사용
+    
+
+        //스크롤 이동거리 구하기(2) - 클릭된 a의 href값 활용하기
+
+        var pid = $(this).attr('href');
+        console.log('클릭된 a의 href 값 :' + pid);
+
+        var pageTop = $(pid).offset().top;
+
+        //이동
+        $('html,body').animate({
+            scrollTop: pageTop
+        }, 800);
+
+        menuChg();
+
+        
+
     });
 
     //슬라이드
@@ -74,11 +115,6 @@ $(document).ready(function () {
 
     });
 
-    
-    
-    
-    
-    
     //fade slide
     var autoCall; //인터벌용 변수
     autoCall = setInterval(fadeSlide, 2000);
@@ -102,10 +138,11 @@ $(document).ready(function () {
 
     }
 
-
-
-
-    
-
 });
+
+
+//메뉴 변경 함수
+function menuChg() {
+    $('.side-pager li').eq(pageCount).addClass('on').siblings().removeClass('on');
+}
 

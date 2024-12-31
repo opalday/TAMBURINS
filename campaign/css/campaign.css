@@ -1,30 +1,26 @@
 @charset "UTF-8";
-section {
+section.cam-sec {
     background-image: url('../img/back-left.png'), url('../img/back-right.png');
     background-repeat: repeat-y;
-    background-position: left center, right center;
- 
-    
-}
-.container > article {
-    display: none;
-}
-.container > article.on {
-    display: block;
+    background-position: left -35px, right -35px;
+      
 }
 
-article.cam-container {
-    width: 100%;
+
+article.cam-container { 
+   padding-top: 80px;
 }
 article.cam-container .cam-tit-wrap {
     text-align: center;
-    margin: 80px 0 50px;
+    margin-bottom: 50px;
 }
 article.cam-container .cam-tit-wrap .cam-tit {
     font-size: 24px;
     font-size: 1.5rem;
     font-weight: 800;
     margin-bottom: 20px;
+
+    opacity: 0;
 }
 article.cam-container .cam-tit-wrap .cam-tit span {
     font-size: 16px;
@@ -35,6 +31,12 @@ article.cam-container .cam-tit-wrap .cam-des {
     font-size: 18px;
     font-size: 1.125rem;
     line-height: 28px;
+
+    position: relative;
+    top: -5px;
+
+    opacity: 0;
+
 }
 
 
@@ -43,12 +45,13 @@ article.cam-container .cam-tit-wrap .cam-des {
 article.cam-container .cam-con-wrap {
     width: 100%;
 }
-article.cam-container .cam-con-wrap .sol-video {
+article.cam-container .cam-con-wrap .cam-video {
     width: 1280px;
     margin-bottom: 200px;
 }
-article.cam-container .cam-con-wrap .sol-video video {
+article.cam-container .cam-con-wrap .cam-video video {
     width: 100%;
+    
 }
 article.cam-container .cam-con-wrap .cam-main-img {
     width: 800px;
@@ -57,9 +60,14 @@ article.cam-container .cam-con-wrap .cam-main-img {
     padding: 20px;
     box-sizing: border-box;
     margin-bottom: 100px;
+
+    
+
+   
 }
 article.cam-container .cam-con-wrap .cam-main-img img {
     width: 100%;
+
 }
 
 
@@ -78,8 +86,13 @@ article.cam-container .cam-con-wrap .cam-p-wrap .cam-g-tit {
     width: 100%;
 }
 .cam-p-wrap .cam-photo .cam-box {
-    width: 9.1%;
+    width: 6.777%;
     height: 500px;
+    overflow: hidden;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+
+    background-color: #111;
     
     /* outline: 1px solid red; */
 
@@ -87,36 +100,55 @@ article.cam-container .cam-con-wrap .cam-p-wrap .cam-g-tit {
 
     position: relative; /* .cam-img-box 의 기준 */
 }
-.cam-p-wrap .cam-photo .cam-box ~ .cam-box {
-    margin-left: 1%;
+.cam-p-wrap .cam-photo .cam-box {
+    width: 6.777%;
+    transition: all 0.5s;
 }
+/* .cam-p-wrap .cam-photo .cam-box:first-child {
+    width: 39%;
+} */
+
+.cam-p-wrap .cam-photo .cam-box.on {
+    width: 39%;
+    transition: all 0.5s;
+}
+/* .cam-p-wrap .cam-photo .cam-box ~ .cam-box {
+    margin-left: 1%;
+} */
 .cam-p-wrap .cam-photo .cam-box a {
     color: #fff;
-    width: 100%;
-    height: 100%;
-    background-color: #111;
-    padding-top: 30px;
-    box-sizing: border-box;
+    text-decoration: underline;
     text-align: center;
-    font-size: 24px;
-    font-size: 1.5rem;
+    font-size: 18px;
+    font-size: 1.125rem;
     /* outline: 1px solid red; */
+
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    z-index: 10;
 }
 .cam-p-wrap .cam-photo .cam-box .cam-img-box {
-    width: 500px;
-    height: 500px;
+    /* width: 500px;
+    height: 500px; */
+    /* position: absolute;
+    top: 0;
+    left: 100%; */
+
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
-    left: 100%;
-
-    display: none;
+    left: 0;
+    
 }
-.cam-p-wrap .cam-photo .cam-box .cam-img-box:first {
+/* .cam-p-wrap .cam-photo .cam-box .cam-img-box:first-child {
     
     display: block;
-}
+} */
 .cam-p-wrap .cam-photo .cam-box .cam-img-box img {
-    width: 100%;
+    /* width: 100%; */
+    height: 100%;
 }
 
 
@@ -152,7 +184,7 @@ article.cam-container .cam-con-wrap .cam-p-wrap .cam-g-tit {
 .cam-pro-wrap .cam-pro-box .cam-pro-des {
     width: 50%;
     height: 100%;
-    /* outline: 1px solid red; */
+  
 }
 
 .cam-pro-wrap .cam-pro-box .right {

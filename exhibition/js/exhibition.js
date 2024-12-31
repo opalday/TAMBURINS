@@ -24,16 +24,6 @@ $(function(){
 
         //모달창
         $(aHref).fadeIn(600);
-
-
-        //모달 슬라이드를 위한 값 구하기 
-        //1. 클릭된 a태그의 href값을 변수 sId에 넣기!
-        sId = aHref;
-
-        //2. 클릭된 메뉴의 ul li 너비값 구하기 
-
-        
-
         
 
     });
@@ -47,105 +37,55 @@ $(function(){
 
     });
 
+
+    var liW = $('.slide li').width();
+    console.log(liW);
     
     //슬라이드
     
-
-    /* $(sId + '.s-box .p-btn li a').on('click', function (e) {
-        
-        //클릭된 a태그의 기본기능 막기!
-        e.preventDefault();
-
-        var sId = $(this).parent().attr('id');
-        var idx = $(this).parent().find('li').index();
-        console.log(sId);
-
-        var aWidth = $(sId + '.s-box .slide-box ul li').width();
-        console.log(aWidth);
-
-        $(sId + '.s-box .slide-box ul').animate({
-            left: -(aWidth * idx)
-        }, 600);
-
-        //클릭된 페이저 디자인 변경하기
-        $(this).parent().addClass('active').siblings().removeClass('active');
-
-    }); */
-    
-
-    //var sId = $(this).parent().attr('id');
-    //$(sId +'.s-box .slide-box ul li:last').prependTo(sId + '.s-box .slide-box ul');
-
     //초기설정
-    $(sId + '> .s-box .slide-box ul li:last-child').prependTo(sId + '> .s-box .slide-box ul');
+    $('#cocoon .s-box .slide-box ul li:last-child').prependTo('#cocoon .s-box .slide-box ul');
+
+    $('#cocoon .s-box .slide-box ul').css('margin-left', -630);
     
 
 
-    $('a.next').click(function(e){
+    $('#cocoon .s-btn .next').click(function(e){
 
-        e.preventDefault();
 
-        
+        $('#cocoon .slide-box ul').css('margin-left', '-630');
 
-        console.log('아이디' + sId);
-
-        var liW = $(sId + '> .s-box .slide-box ul li').width();
-        console.log('li 하나의 크기: ' + liW);
-
-        $(sId + '> .slider ul').css('margin-left', -liW);
-
-        var liQ = $(sId + '> .s-box .slide-box ul').offset().left;
-        console.log(liQ);
-
-        console.log(sId);
-
-        $(sId + '> .s-box .slide-box ul').animate({
-            marginLeft: '-=' + liW
+        $('#cocoon .s-box .slide-box ul').animate({
+            marginLeft: '-=' + 630
         }, 800, function () {
             
             //다음(두번째 클릭)을 위한 준비!
             //1) 첫번째 li(슬라이드)를 맨 뒤로 보내기 >> append()
             //2) 슬라이드 순서 변경에 따라 ul의 위치 조절하기 >> margin
 
-            $(sId + '> .s-box .slide-box ul li:first-child').appendTo(sId + '> .s-box .slide-box ul');
-            $(sId + '> .s-box .slide-box ul').css('margin-left',-liW);
+            $('#cocoon .s-box .slide-box ul li:first-child').appendTo('#cocoon .s-box .slide-box ul');
+            $('#cocoon .s-box .slide-box ul').css('margin-left',-630);
 
         });
-
-
-        if(liQ === -262) {
-            $('.s-btn .prev').show();
-        } 
         
 
     });
 
-    
-
     //이전 버튼을 클릭했을 때!
-    $('a.prev').click(function (e) { 
+    $('#cocoon a.prev').click(function (e) { 
 
         //a 기본기능 막기!
         e.preventDefault();
-        var liW = $(sId + '> .s-box .slide-box ul li').width();
-        console.log('li 하나의 크기: ' + liW);
 
-        var liQ = $(sId + '> .s-box .slide-box ul').offset().left;
-        console.log('이전버튼' + liQ);
-
-        $(sId + '> .s-box .slide-box ul').animate({
-            marginLeft: '+=' + liW
+        $('#cocoon .s-box .slide-box ul').animate({
+            marginLeft: '+=' + 630
         }, 800, function () {
             
             //다음(두번째 클릭)을 위한 준비!!!
-            $(sId + '> .s-box .slide-box ul li:last-child').prependTo(sId + '> .s-box .slide-box ul');
-            $(sId + '> .s-box .slide-box ul').css('margin-left',-liW);
+            $('#cocoon .s-box .slide-box ul li:last-child').prependTo('#cocoon .s-box .slide-box ul');
+            $('#cocoon .s-box .slide-box ul').css('margin-left',-630);
         });
-    });
-    
-    
-    
-    
+    }); 
 
 
 });
