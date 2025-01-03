@@ -19,26 +19,23 @@ header.ac {
     border-bottom: 1px solid #111;
 }
 header .header-wrap {
-    height: 100%;
+    width: 80%;
+    margin: 0 auto;
 
-    position: relative;
+    height: 100%;
+    text-align: center;
     /* outline: 1px solid red; */
 }
 header h1.index-logo {
-    height: 25px;
-
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-
-    /* outline: 2px solid red; */
+    display: inline-block;
 }
 header h1.index-logo > a {
     height: 100%;
 }
 header h1.index-logo > a > img {
-    height: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    height: 30px;
 }
 
 header .menu-btn {
@@ -49,10 +46,8 @@ header .menu-btn {
     box-sizing: border-box;
 
     position: absolute;
-    top: 50%;
     right: 10%;
-    transform: translateY(-50%);
-    /* outline: 1px solid red; */
+    top: 25px;
 
 }
 header .menu-btn span {
@@ -70,14 +65,12 @@ header .menu-btn span:nth-child(2) {
 
 nav.m-gnb {
     width: 100%;
-    max-width: 1920px;
     height: 100%;
     background-color: rgba(255,255,255,0.8);
 
-    position: absolute;
+    position: fixed;
+    left: 0;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
     
     display: none;
     z-index: 888;

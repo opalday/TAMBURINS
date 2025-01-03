@@ -43,8 +43,9 @@ header .menu-btn {
     padding: 0 12.5px;
     box-sizing: border-box;
 
-    float: right;
-    margin-top: 25px;
+    position: absolute;
+    right: 10%;
+    top: 25px;
 
 }
 header .menu-btn span {
@@ -62,12 +63,12 @@ header .menu-btn span:nth-child(2) {
 
 nav.m-gnb {
     width: 100%;
-    height: calc(100% - 80px);
+    height: 100%;
     background-color: rgba(255,255,255,0.8);
 
     position: fixed;
     left: 0;
-    top: 80px;
+    top: 0;
     
     display: none;
     z-index: 888;
