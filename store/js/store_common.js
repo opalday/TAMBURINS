@@ -33,10 +33,22 @@ $(document).ready(function () {
 
             pageCount++;
             if (pageCount === total) pageCount =  total -1;
+
+            $('header').css({
+                'background-color': 'rgba(255,255,255,0.9)',
+                'border-bottom': '1px solid #111'
+            });
         } else {
 
             pageCount--;
             if (pageCount === -1) pageCount = 0;
+
+            if (pageCount === 0 ) {
+                $('header').css({
+                    'background-color': 'transparent',
+                    'border-bottom': 'none'
+                    });
+                }
         }
 
         var pageTop = $('.page').eq(pageCount).offset().top;

@@ -3,6 +3,8 @@ section.cam-sec {
     background-image: url('../img/back-left.png'), url('../img/back-right.png');
     background-repeat: repeat-y;
     background-position: left -35px, right -35px;
+
+    width: 100%;
       
 }
 

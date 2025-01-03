@@ -3,11 +3,12 @@
 //nav js
 $(window).scroll(function(){
     var wTop = $(this).scrollTop();
+    console.log('스크롤탑' + wTop);
 
-    $('nav.m-gnb').css({
+    /*$('nav.m-gnb').css({
         top: wTop
-     
-    });
+
+    });*/
 
     if (wTop > 10) {
         $('header').css({
@@ -23,9 +24,9 @@ $(window).scroll(function(){
         });
     }
     
-    if (wTop === 0) {
+    /* if (wTop === 0) {
         
-    }
+    } */
 
 });
 
@@ -53,6 +54,8 @@ $(document).ready(function(){
     $('header .menu-btn').click(function(){
 
         $('nav.m-gnb').slideToggle(600);
+
+
     });
 
 

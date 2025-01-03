@@ -4,6 +4,14 @@
 html, body {
     overflow: hidden;
 }
+header .menu-btn span {
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 3px;
+    display: block;
+
+}
 
 .page {
     width: 100%;

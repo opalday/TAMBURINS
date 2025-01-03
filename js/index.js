@@ -31,6 +31,13 @@ $(document).ready(function () {
 
             pageCount++;
             if (pageCount === total) pageCount =  total -1;
+
+            $('header').css({
+                'background-color': 'rgba(255,255,255,0.9)',
+                'border-bottom': '1px solid #111'
+            }).find('img').attr('src', 'img/logo.png');
+            $('header .menu-btn span').css('background-color', '#111');
+
         } else {
 
             pageCount--;
@@ -51,9 +58,13 @@ $(document).ready(function () {
             $('.side-pager li').removeClass('on');
         }
 
-        if (pageCoun === 1) {
-            $('header')
-        }
+        if (pageCount === 0 ) {
+            $('header').css({
+                'background-color': 'transparent',
+                'border-bottom': 'none'
+                }).find('img').attr('src', 'img/logo_w.png');
+                $('header .menu-btn span').css('background-color', '#fff');
+            }
 
     });
 

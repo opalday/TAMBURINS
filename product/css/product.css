@@ -20,6 +20,7 @@ section {
     font-size: 32px;
     font-size: 2rem;
     font-weight: 800; 
+    opacity: 0;
 
     position: absolute;
     top: 65%;
@@ -37,6 +38,8 @@ section {
 .product-wrap ul li {
     width: 20%;
     float: left;
+
+    opacity: 0;
 }
 
 
@@ -69,20 +72,20 @@ li.m-left {
     margin-left: 20%;
 }
 
-section.perfume {
+section.perfume-con {
     padding-top: 80px;
     box-sizing: border-box;
 
     /* outline: solid black; */
 }
 
-section.perfume .pro-title .tit-wrap {
+section.perfume-con .pro-title .tit-wrap {
     margin-top: 0;
 }
-section.perfume .pro-title .tit-wrap .tit {
+section.perfume-con .pro-title .tit-wrap .tit {
     font-family: "Crimson Pro", serif;
 }
-section.perfume .product-wrap {
+section.perfume-con .product-wrap {
     /* height: 100%; */
 }
 
@@ -168,6 +171,57 @@ section.perfume .product-wrap {
 
     top: 10%;
     right: 0;
+}
+
+nav.side-pager {
+    /* outline: 5px solid red; */
+
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+
+    z-index: 777;
+}
+nav.side-pager ul {}
+nav.side-pager ul li {
+    float: none;
+    margin: 10px 0;
+}
+nav.side-pager ul li a {
+    color: #111;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #111;
+    box-sizing: border-box;
+    position: relative; /* span의 기준! */
+
+    /* outline: 1px solid red; */
+}
+nav.side-pager ul li span { /* 메뉴글자 */
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    position: absolute;
+    left: 200%;
+    top: -6px;
+
+    width: 100px;
+    letter-spacing: 2px;
+
+    display: none;
+}
+
+nav.side-pager ul li a:hover span {
+    display: block;
+}
+
+/* 선택된 페이저 디자인 */
+nav.side-pager ul li.on a {
+    background-color: #111;
+}
+nav.side-pager ul li.on a span {
+    display: block;
 }
 
 
