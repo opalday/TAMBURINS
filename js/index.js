@@ -10,10 +10,10 @@ $(document).ready(function () {
     total = $('.page').length;
     console.log('현재 페이지 갯수' + total);
 
-    $(window).on('mousewheel DOMMouseScroll', function(){
+    $(window).on('mousewheel DOMMouseScroll', function () {
 
 
-        if(stat === 1) return false;
+        if (stat === 1) return false;
         stat = 1;
 
         var evt = window.event;
@@ -30,7 +30,7 @@ $(document).ready(function () {
         if (delta < 0) {
 
             pageCount++;
-            if (pageCount === total) pageCount =  total -1;
+            if (pageCount === total) pageCount = total - 1;
 
             $('header').css({
                 'background-color': 'rgba(255,255,255,0.9)',
@@ -48,27 +48,27 @@ $(document).ready(function () {
 
         $('html,body').animate({
             scrollTop: pageTop + 'px'
-        }, 800, function(){
+        }, 800, function () {
             stat = 0;
         });
 
         menuChg();
 
-        if(pageCount === total - 1){
+        if (pageCount === total - 1) {
             $('.side-pager li').removeClass('on');
         }
 
-        if (pageCount === 0 ) {
+        if (pageCount === 0) {
             $('header').css({
                 'background-color': 'transparent',
                 'border-bottom': 'none'
-                }).find('img').attr('src', 'img/logo_w.png');
-                $('header .menu-btn span').css('background-color', '#fff');
-            }
+            }).find('img').attr('src', 'img/logo_w.png');
+            $('header .menu-btn span').css('background-color', '#fff');
+        }
 
     });
 
-    $('.side-pager a').on('click', function(e){
+    $('.side-pager a').on('click', function (e) {
 
         e.preventDefault();
 
@@ -79,7 +79,7 @@ $(document).ready(function () {
         console.log('변경된 pageCount번호: ' + pageCount);
 
         //스크롤 이동거리 구하기(1) - pageCount 또는 idx 사용
-    
+
 
         //스크롤 이동거리 구하기(2) - 클릭된 a의 href값 활용하기
 
@@ -91,17 +91,33 @@ $(document).ready(function () {
         //이동
         $('html,body').animate({
             scrollTop: pageTop
-        }, 800);
+        }, 800, function () {
+
+            $('header').css({
+                'background-color': 'rgba(255,255,255,0.9)',
+                'border-bottom': '1px solid #111'
+            }).find('img').attr('src', 'img/logo.png');
+            $('header .menu-btn span').css('background-color', '#111');
+
+            if(pageCount === 0) {
+                $('header').css({
+                    'background-color': 'transparent',
+                    'border-bottom': 'none'
+                }).find('img').attr('src', 'img/logo_w.png');
+                $('header .menu-btn span').css('background-color', '#fff');
+            }
+
+        });
 
         menuChg();
 
-        
+
 
     });
 
     //슬라이드
     $('.pager li a').on('click', function (e) {
-        
+
         //클릭된 a태그의 기본기능 막기!
         e.preventDefault();
 
