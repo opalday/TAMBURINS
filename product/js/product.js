@@ -115,6 +115,15 @@ $(document).ready(function () {
                 opacity: 1
             }, 600);
 
+            $('header').css({
+                'background-color': 'rgba(255,255,255,0.9)',
+                'border-bottom': '1px solid #111'
+            });
+
+            if(pageCount === 0) {
+                $('header').css('border-bottom', 'none');
+            }
+
 
         });
 
