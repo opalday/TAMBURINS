@@ -129,27 +129,26 @@ $(document).ready(function () {
 
         menuChg();
 
+    });
 
-        $('.product-wrap li a').click(function (e) {
+    $('.product-wrap li a').click(function (e) {
 
-            //기본기능 막기 
-            e.preventDefault();
+        //기본기능 막기 
+        e.preventDefault();
 
-            var aHref = $(this).attr('href');
-            console.log(aHref);
+        var aHref = $(this).attr('href');
+        console.log(aHref);
 
-            //모달창
-            $(aHref).fadeIn(600);
+        //모달창
+        $(aHref).fadeIn(600);
 
-        });
+    });
 
 
-        //모달창 닫기 
-        $('.p-container').click(function () {
-            $(this).fadeOut(600);
-            $('.p-container').find('p-des-wrap').remove().find('img').remove();
-        });
-
+    //모달창 닫기 
+    $('.p-container').click(function () {
+        $(this).fadeOut(600);
+        $('.p-container').find('p-des-wrap').remove().find('img').remove();
     });
 });
 
